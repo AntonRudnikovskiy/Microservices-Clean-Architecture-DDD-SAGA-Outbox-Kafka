@@ -8,6 +8,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/order-service" />
+            <option value="$PROJECT_DIR$/order-service/order-application" />
+            <option value="$PROJECT_DIR$/order-service/order-container" />
+            <option value="$PROJECT_DIR$/order-service/order-dataaccess" />
+            <option value="$PROJECT_DIR$/order-service/order-domain" />
+            <option value="$PROJECT_DIR$/order-service/order-domain/order-damain-core" />
+            <option value="$PROJECT_DIR$/order-service/order-domain/order-domain-service" />
+            <option value="$PROJECT_DIR$/order-service/order-messaging" />
           </set>
         </option>
       </GradleProjectSettings>
