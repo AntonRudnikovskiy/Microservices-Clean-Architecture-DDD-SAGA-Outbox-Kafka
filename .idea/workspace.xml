@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добвил модули для order-service и настроил файлы gradle build">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/entity/AggregateRoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/BaseId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/Money.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/OrderId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/OrderStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил новый модуль common для value object">
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/OrderItemId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/StreetAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/TrackingId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +58,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -154,7 +151,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723205152389</updated>
-      <workItem from="1723205154416" duration="7053000" />
+      <workItem from="1723205154416" duration="11574000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -170,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723233985828</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавил новый модуль common для value object">
+      <created>1723237134106</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723237134106</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +194,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="Добвил модули для order-service и настроил файлы gradle build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добвил модули для order-service и настроил файлы gradle build" />
+    <MESSAGE value="Добавил новый модуль common для value object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил новый модуль common для value object" />
   </component>
 </project>
