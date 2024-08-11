@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил агрегат и базовые сущности в модуль order-domain-core">
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/exception/DomainException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/exception/OrderDomainException.java" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил бизнес логику для Order">
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/OrderDomainService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/event/OrderCancelledEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/event/OrderCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/event/OrderEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/event/OrderPaidEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/Money.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/OrderId.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/OrderId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/OrderItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/OrderItemId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/TrackingId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/TrackingId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +155,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723205152389</updated>
-      <workItem from="1723205154416" duration="15996000" />
+      <workItem from="1723205154416" duration="32823000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -182,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723292592199</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавил бизнес логику для Order">
+      <created>1723300263642</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723300263642</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +214,7 @@
     <MESSAGE value="Добвил модули для order-service и настроил файлы gradle build" />
     <MESSAGE value="Добавил новый модуль common для value object" />
     <MESSAGE value="Добавил агрегат и базовые сущности в модуль order-domain-core" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил агрегат и базовые сущности в модуль order-domain-core" />
+    <MESSAGE value="Добавил бизнес логику для Order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил бизнес логику для Order" />
   </component>
 </project>

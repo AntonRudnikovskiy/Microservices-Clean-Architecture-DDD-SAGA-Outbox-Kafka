@@ -43,15 +43,50 @@ public class Order extends AggregateRoot<OrderId> {
         validateItemsPrice();
     }
 
+    public void pay() {
+        if (orderStatus != OrderStatus.PENDING) {
+            log.error("Order is not in correct state for pay operation!");
+            throw new OrderDomainException("Order is not in correct state for pay operation!");
+        }
+        orderStatus = OrderStatus.PAID;
+    }
+
+    public void approve() {
+        if (orderStatus != OrderStatus.PAID) {
+            log.error("Order is not in correct state for approve operation!");
+            throw new OrderDomainException("Order is not in correct state for approve operation!");
+        }
+        orderStatus = OrderStatus.APPROVED;
+    }
+
+    public void initCancel() {
+        if (orderStatus != OrderStatus.PAID) {
+            log.error("Order is not in correct state for initCancel operation!");
+            throw new OrderDomainException("Order is not in correct state for initCancel operation!");
+        }
+        orderStatus = OrderStatus.CANCELLED;
+    }
+
+    public void cancel() {
+        if (orderStatus == OrderStatus.CANCELLED || orderStatus == OrderStatus.PENDING) {
+            log.error("Order is not in correct state for cancel operation!");
+            throw new OrderDomainException("Order is not in correct state for cancel operation!");
+        }
+        orderStatus = OrderStatus.CANCELLED;
+    }
+
     private void validateInitialOrder() {
         if (orderStatus != null || getId() != null) {
+            log.error("Order is not in correct state for initialization");
             throw new OrderDomainException("Order is not in correct state for initialization");
         }
+        orderStatus = OrderStatus.APPROVED;
     }
 
     private void validateTotalPrice() {
         if (price != null || !price.isGreaterThanZero()) {
-            throw new OrderDomainException("Total price must be greater than zero!");
+            log.error("Order is not in correct state for pay operation!");
+            throw new OrderDomainException("Order is not in correct state for pay operation!");
         }
     }
 
@@ -62,6 +97,8 @@ public class Order extends AggregateRoot<OrderId> {
         }).reduce(Money.ZERO, Money::add);
 
         if (price.equals(orderItemsTotal)) {
+            log.error("Total price: " + price.getAmount() +
+                    " is not equal to Order items total: " + orderItemsTotal.getAmount() + "!");
             throw new OrderDomainException("Total price: " + price.getAmount() +
                     " is not equal to Order items total: " + orderItemsTotal.getAmount() + "!");
         }
@@ -69,8 +106,10 @@ public class Order extends AggregateRoot<OrderId> {
 
     private void validateItemPrice(OrderItem orderItem) {
         if (orderItem.isPriceValid()) {
+            log.error("Order item price: " + orderItem.getPrice().getAmount()
+                    + " is not valid for product " + orderItem.getProduct().getPrice());
             throw new OrderDomainException("Order item price: " + orderItem.getPrice().getAmount()
-            + " is not valid for product " + orderItem.getProduct().getPrice());
+                    + " is not valid for product " + orderItem.getProduct().getPrice());
         }
     }
 
