@@ -1,6 +1,7 @@
 package order.processing.system.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import order.processing.system.exception.OrderDomainException;
@@ -18,6 +19,7 @@ import java.util.UUID;
 
 @AllArgsConstructor
 @Getter
+@Builder
 @Slf4j
 public class Order extends AggregateRoot<OrderId> {
     private final CustomerId customerId;

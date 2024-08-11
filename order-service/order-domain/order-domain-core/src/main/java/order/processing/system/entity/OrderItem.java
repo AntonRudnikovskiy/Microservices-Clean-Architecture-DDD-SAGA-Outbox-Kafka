@@ -1,6 +1,7 @@
 package order.processing.system.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import order.processing.system.valueobject.Money;
@@ -9,6 +10,7 @@ import order.processing.system.valueobject.OrderItemId;
 
 @AllArgsConstructor
 @Setter
+@Builder
 @Getter
 public class OrderItem extends BaseEntity<OrderItemId> {
     private OrderId orderId;

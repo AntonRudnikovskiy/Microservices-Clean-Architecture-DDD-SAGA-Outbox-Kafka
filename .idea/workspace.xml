@@ -4,46 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил DTO">
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/event/publisher/DomainEventPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/input/listener/PaymentResponseMessageListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/input/listener/RestaurantApprovalResponseMessageListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/input/service/OrderApplicationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/output/message/publisher/OrderCancelledPaymentRequestMessagePublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/output/message/publisher/OrderCreatedPaymentRequestMessagePublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/output/message/publisher/OrderPaidPaymentRequestMessagePublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/output/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/output/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/output/repository/RestaurantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/order/processing/system/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Правки по названиям модулей">
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderApplicationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderTrackCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/src/main/java/order/processing/system/dto/CreateOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/dto/CreateOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/src/main/java/order/processing/system/dto/CreateOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/dto/CreateOrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/src/main/java/order/processing/system/dto/OrderAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/dto/OrderAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/src/main/java/order/processing/system/dto/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/dto/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/src/main/java/order/processing/system/message/PaymentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/dto/message/PaymentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/src/main/java/order/processing/system/message/RestaurantApprovalResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/dto/message/RestaurantApprovalResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/src/main/java/order/processing/system/track/TrackOrderQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/dto/track/TrackOrderQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-servie/src/main/java/order/processing/system/track/TrackOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/dto/track/TrackOrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/OrderDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/entity/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/event/OrderCancelledEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/event/OrderCancelledEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/event/OrderCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/event/OrderCreatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/event/OrderEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/event/OrderEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/event/OrderPaidEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/event/OrderPaidEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/exception/OrderDomainException.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/exception/OrderDomainException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/OrderItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/valueobject/OrderItemId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/StreetAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/valueobject/StreetAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-damain-core/src/main/java/order/processing/system/valueobject/TrackingId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/valueobject/TrackingId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/CustomerId.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/CustomerId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/ProductId.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/ProductId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/RestaurantId.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/order/processing/system/valueobject/RestaurantId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Restaurant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,8 +107,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -293,7 +266,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723205152389</updated>
-      <workItem from="1723205154416" duration="44310000" />
+      <workItem from="1723205154416" duration="53772000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -344,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723377726085</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Правки по названиям модулей">
+      <created>1723390549471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723390549471</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,6 +349,7 @@
     <MESSAGE value="Добавил бизнес логику для Order" />
     <MESSAGE value="Добавил сервис OrderDomainServiceImpl" />
     <MESSAGE value="Добавил DTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил DTO" />
+    <MESSAGE value="Правки по названиям модулей" />
+    <option name="LAST_COMMIT_MESSAGE" value="Правки по названиям модулей" />
   </component>
 </project>
