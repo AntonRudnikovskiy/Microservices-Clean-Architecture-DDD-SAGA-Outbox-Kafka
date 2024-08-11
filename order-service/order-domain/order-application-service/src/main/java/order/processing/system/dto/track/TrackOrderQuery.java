@@ -1,4 +1,4 @@
-package order.processing.system.track;
+package order.processing.system.dto.track;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

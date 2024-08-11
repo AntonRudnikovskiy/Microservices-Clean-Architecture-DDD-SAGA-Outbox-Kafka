@@ -1,4 +1,4 @@
-package order.processing.system.message;
+package order.processing.system.dto.message;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

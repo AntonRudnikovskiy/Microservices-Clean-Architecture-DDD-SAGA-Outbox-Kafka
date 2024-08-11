@@ -15,8 +15,8 @@
             <option value="$PROJECT_DIR$/order-service/order-container" />
             <option value="$PROJECT_DIR$/order-service/order-dataaccess" />
             <option value="$PROJECT_DIR$/order-service/order-domain" />
-            <option value="$PROJECT_DIR$/order-service/order-domain/order-application-servie" />
-            <option value="$PROJECT_DIR$/order-service/order-domain/order-damain-core" />
+            <option value="$PROJECT_DIR$/order-service/order-domain/order-application-service" />
+            <option value="$PROJECT_DIR$/order-service/order-domain/order-domain-core" />
             <option value="$PROJECT_DIR$/order-service/order-domain/order-domain-service" />
             <option value="$PROJECT_DIR$/order-service/order-messaging" />
           </set>
