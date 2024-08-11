@@ -17,3 +17,5 @@ findProject(":order-service:order-messaging")?.name = "order-messaging"
 include("common")
 include("common:common-domain")
 findProject(":common:common-domain")?.name = "common-domain"
+include("order-service:order-domain:order-application-servie")
+findProject(":order-service:order-domain:order-application-servie")?.name = "order-application-servie"
