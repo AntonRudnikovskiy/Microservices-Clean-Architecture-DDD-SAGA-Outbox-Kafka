@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил методы для OrderCreateCommandHandler">
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ApplicationDomainEventPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreatedEventApplicationListener.java" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил EventListener и publisher">
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderDataMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/exception/OrderNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/output/message/publisher/OrderCreatedPaymentRequestMessagePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/ports/output/message/publisher/OrderCreatedPaymentRequestMessagePublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderTrackCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderTrackCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +263,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723205152389</updated>
-      <workItem from="1723205154416" duration="57203000" />
+      <workItem from="1723205154416" duration="60697000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -328,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723411672690</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Добавил EventListener и publisher">
+      <created>1723456422437</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723456422437</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +362,7 @@
     <MESSAGE value="Добавил DTO" />
     <MESSAGE value="Правки по названиям модулей" />
     <MESSAGE value="Добавил методы для OrderCreateCommandHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил методы для OrderCreateCommandHandler" />
+    <MESSAGE value="Добавил EventListener и publisher" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил EventListener и publisher" />
   </component>
 </project>

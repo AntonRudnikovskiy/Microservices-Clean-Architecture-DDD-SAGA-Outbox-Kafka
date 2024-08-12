@@ -3,6 +3,8 @@ package order.processing.system.mapper;
 import order.processing.system.dto.CreateOrderCommand;
 import order.processing.system.dto.CreateOrderResponse;
 import order.processing.system.dto.OrderAddress;
+import order.processing.system.dto.track.TrackOrderQuery;
+import order.processing.system.dto.track.TrackOrderResponse;
 import order.processing.system.entity.Order;
 import order.processing.system.entity.OrderItem;
 import order.processing.system.entity.Product;
@@ -41,6 +43,14 @@ public class OrderMapper {
         return CreateOrderResponse.builder()
                 .orderTrackingId(order.getTrackingId().getValue())
                 .orderStatus(order.getOrderStatus())
+                .build();
+    }
+
+    public TrackOrderResponse orderToTrackOrderResponse(Order order) {
+        return TrackOrderResponse.builder()
+                .orderTrackingId(order.getTrackingId().getValue())
+                .orderStatus(order.getOrderStatus())
+                .failureMessages(order.getFailureMessages())
                 .build();
     }
 
