@@ -6,6 +6,7 @@ import order.processing.system.event.OrderCreatedEvent;
 import order.processing.system.ports.output.message.publisher.OrderCreatedPaymentRequestMessagePublisher;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.event.TransactionalEventListener;
 
 @Slf4j
 @Component
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class OrderCreatedEventApplicationListener {
     private final OrderCreatedPaymentRequestMessagePublisher publisher;
 
-    @EventListener
+    @TransactionalEventListener
     public void process(OrderCreatedEvent orderCreatedEvent) {
         publisher.publish(orderCreatedEvent);
         log.info("OrderCreatedEvent was published");

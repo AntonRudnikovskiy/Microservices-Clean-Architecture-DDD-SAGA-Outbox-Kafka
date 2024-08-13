@@ -10,6 +10,7 @@ import order.processing.system.mapper.OrderMapper;
 import order.processing.system.ports.output.repository.OrderRepository;
 import order.processing.system.valueobject.TrackingId;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -21,7 +22,7 @@ public class OrderTrackCommandHandler {
     private final OrderMapper orderMapper;
     private final OrderRepository orderRepository;
 
-    //@Transactional(readOnly = true)
+    @Transactional(readOnly = true)
     public TrackOrderResponse trackOrder(TrackOrderQuery trackOrderQuery) {
         UUID orderTrackingId = trackOrderQuery.getOrderTrackingId();
         Optional<Order> order = orderRepository.findTracking(new TrackingId(orderTrackingId));

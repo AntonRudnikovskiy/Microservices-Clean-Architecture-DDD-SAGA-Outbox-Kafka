@@ -9,5 +9,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.springframework:spring-tx")
+
+    implementation("org.junit.jupiter:junit-jupiter-params:5.10.0")
+    implementation("org.assertj:assertj-core:3.24.2")
+    implementation("org.mockito:mockito-junit-jupiter:5.4.0")
+    implementation("org.mockito:mockito-core:5.4.0")
 }

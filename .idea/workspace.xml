@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил EventListener и publisher">
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderDataMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/exception/OrderNotFoundException.java" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="VNS">
+      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/order/processing/system/OrderApplicationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderTrackCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderTrackCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +131,8 @@
     "last_opened_file_path": "C:/Users/Anton Rudnikovskiy/IdeaProjects/food-ordering-system",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "d5f2836f2363ce4064b47855bca53939"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -139,119 +143,129 @@
       <recent name="C:\Users\Anton Rudnikovskiy\IdeaProjects\food-ordering-system\order-service\order-domain\order-application-service\src\main\java\order\processing\system" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.food-ordering-system:order-service:order-domain:order-application-service [build]">
-    <configuration name="food-ordering-system [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.OrderApplicationServiceTest.testCreateOrderWithWrongPrice">
+    <configuration name="OrderApplicationServiceTest.testCreateOrderWithCustomerNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":order-service:order-domain:order-application-service:test" />
+            <option value="--tests" />
+            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithCustomerNotExist&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="food-ordering-system [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderApplicationServiceTest.testCreateOrderWithRestaurantNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":order-service:order-domain:order-application-service:test" />
+            <option value="--tests" />
+            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithRestaurantNotExist&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="food-ordering-system:order-service:order-domain:order-application-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderApplicationServiceTest.testCreateOrderWithWrongPrice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/order-service/order-domain/order-application-service" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":order-service:order-domain:order-application-service:test" />
+            <option value="--tests" />
+            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithWrongPrice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="food-ordering-system:order-service:order-domain:order-application-service [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderApplicationServiceTest.testCreateOrderWithWrongProductPrice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/order-service/order-domain/order-application-service" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":order-service:order-domain:order-application-service:test" />
+            <option value="--tests" />
+            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithWrongProductPrice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="food-ordering-system:order-service:order-domain:order-application-servie [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderApplicationServiceTest.testCreateOrderWithWrongTotalPrice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/order-service/order-domain/order-application-servie" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":order-service:order-domain:order-application-service:test" />
+            <option value="--tests" />
+            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithWrongTotalPrice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.food-ordering-system:order-service:order-domain:order-application-service [build]" />
-        <item itemvalue="Gradle.food-ordering-system:order-service:order-domain:order-application-service [clean]" />
-        <item itemvalue="Gradle.food-ordering-system:order-service:order-domain:order-application-servie [clean]" />
-        <item itemvalue="Gradle.food-ordering-system [build]" />
-        <item itemvalue="Gradle.food-ordering-system [clean]" />
+        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithWrongPrice" />
+        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithRestaurantNotExist" />
+        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithCustomerNotExist" />
+        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithWrongProductPrice" />
+        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithWrongTotalPrice" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +277,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723205152389</updated>
-      <workItem from="1723205154416" duration="60697000" />
+      <workItem from="1723205154416" duration="65565000" />
+      <workItem from="1723472531193" duration="15092000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -335,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723456422437</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="VNS">
+      <created>1723463764360</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723463764360</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +385,48 @@
     <MESSAGE value="Правки по названиям модулей" />
     <MESSAGE value="Добавил методы для OrderCreateCommandHandler" />
     <MESSAGE value="Добавил EventListener и publisher" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил EventListener и publisher" />
+    <MESSAGE value="VNS" />
+    <option name="LAST_COMMIT_MESSAGE" value="VNS" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/order/processing/system/OrderApplicationServiceTest.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

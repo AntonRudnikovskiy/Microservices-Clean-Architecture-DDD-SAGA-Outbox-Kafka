@@ -13,8 +13,10 @@ import order.processing.system.mapper.OrderMapper;
 import order.processing.system.ports.output.repository.CustomerRepository;
 import order.processing.system.ports.output.repository.OrderRepository;
 import order.processing.system.ports.output.repository.RestaurantRepository;
+import order.processing.system.valueobject.OrderId;
 import order.processing.system.valueobject.RestaurantId;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -30,10 +32,12 @@ public class OrderCreateCommandHandler {
     private final ApplicationDomainEventPublisher eventPublisher;
     private final OrderMapper orderMapper;
 
+    @Transactional
     public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand) {
         checkCustomer(createOrderCommand.getCustomerId());
         Restaurant restaurant = checkRestaurant(createOrderCommand);
         Order order = orderMapper.createOrderCommandToOrder(createOrderCommand);
+        order.setId(new OrderId(UUID.randomUUID()));
         OrderCreatedEvent orderCreatedEvent = orderDomainService.validateAndInitiateOrder(order, restaurant);
         Order savedOrder = saveOder(order);
         log.info("Order is created with id: {}", order.getId().getValue());

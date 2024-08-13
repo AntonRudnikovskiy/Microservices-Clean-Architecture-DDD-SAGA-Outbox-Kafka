@@ -1,8 +1,8 @@
 plugins {
     id("java")
     idea
-    id("io.spring.dependency-management") version "1.1.4"
-    id("org.springframework.boot") version "3.1.0"
+    id("io.spring.dependency-management")
+    id("org.springframework.boot")
 }
 
 idea {
@@ -53,8 +53,11 @@ allprojects {
             dependency("com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.13.0")
 
 
-            dependency("org.junit.jupiter:junit-jupiter-api:5.8.1")
-            dependency("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+            dependency("org.junit.jupiter:junit-jupiter-params:5.9.2")
+            dependency("org.assertj:assertj-core:3.24.2")
+            dependency("org.mockito:mockito-core:5.12.0")
+            dependency("org.mockito:mockito-junit-jupiter:5.12.0")
+            dependency("org.springframework.boot:spring-boot-starter-test:3.1.0")
 
 
             dependency("org.hibernate.orm:hibernate-core:6.5.2.Final")
