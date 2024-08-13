@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="VNS">
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/order/processing/system/OrderApplicationServiceTest.java" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="тесты в процессе">
+      <change afterPath="$PROJECT_DIR$/infrastructure/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/common.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,6 +127,7 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "last_opened_file_path": "C:/Users/Anton Rudnikovskiy/IdeaProjects/food-ordering-system",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -143,129 +142,74 @@
       <recent name="C:\Users\Anton Rudnikovskiy\IdeaProjects\food-ordering-system\order-service\order-domain\order-application-service\src\main\java\order\processing\system" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrderApplicationServiceTest.testCreateOrderWithWrongPrice">
-    <configuration name="OrderApplicationServiceTest.testCreateOrderWithCustomerNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":order-service:order-domain:order-application-service:test" />
-            <option value="--tests" />
-            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithCustomerNotExist&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+  <component name="RunManager" selected="Docker.infrastructure/docker-compose.yaml.schema-registry: Compose Deployment">
+    <configuration name="infrastructure/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="infrastructure/docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="OrderApplicationServiceTest.testCreateOrderWithRestaurantNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":order-service:order-domain:order-application-service:test" />
-            <option value="--tests" />
-            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithRestaurantNotExist&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+    <configuration name="infrastructure/docker-compose.yaml.kafka-broker-1: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-broker-1" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="infrastructure/docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="OrderApplicationServiceTest.testCreateOrderWithWrongPrice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":order-service:order-domain:order-application-service:test" />
-            <option value="--tests" />
-            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithWrongPrice&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+    <configuration name="infrastructure/docker-compose.yaml.kafka-broker-3: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-broker-3" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="infrastructure/docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="OrderApplicationServiceTest.testCreateOrderWithWrongProductPrice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":order-service:order-domain:order-application-service:test" />
-            <option value="--tests" />
-            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithWrongProductPrice&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+    <configuration name="infrastructure/docker-compose.yaml.kafka-manager: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-manager" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="infrastructure/docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="OrderApplicationServiceTest.testCreateOrderWithWrongTotalPrice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":order-service:order-domain:order-application-service:test" />
-            <option value="--tests" />
-            <option value="&quot;order.processing.system.OrderApplicationServiceTest.testCreateOrderWithWrongTotalPrice&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+    <configuration name="infrastructure/docker-compose.yaml.schema-registry: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="schema-registry" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="infrastructure/docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithWrongPrice" />
-        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithRestaurantNotExist" />
-        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithCustomerNotExist" />
-        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithWrongProductPrice" />
-        <item itemvalue="Gradle.OrderApplicationServiceTest.testCreateOrderWithWrongTotalPrice" />
+        <item itemvalue="Docker.infrastructure/docker-compose.yaml.schema-registry: Compose Deployment" />
+        <item itemvalue="Docker.infrastructure/docker-compose.yaml.kafka-manager: Compose Deployment" />
+        <item itemvalue="Docker.infrastructure/docker-compose.yaml.kafka-broker-3: Compose Deployment" />
+        <item itemvalue="Docker.infrastructure/docker-compose.yaml.kafka-broker-1: Compose Deployment" />
+        <item itemvalue="Docker.infrastructure/docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +222,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723205152389</updated>
       <workItem from="1723205154416" duration="65565000" />
-      <workItem from="1723472531193" duration="15092000" />
+      <workItem from="1723472531193" duration="24133000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -357,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723463764360</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="тесты в процессе">
+      <created>1723547843585</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723547843585</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +337,8 @@
     <MESSAGE value="Добавил методы для OrderCreateCommandHandler" />
     <MESSAGE value="Добавил EventListener и publisher" />
     <MESSAGE value="VNS" />
-    <option name="LAST_COMMIT_MESSAGE" value="VNS" />
+    <MESSAGE value="тесты в процессе" />
+    <option name="LAST_COMMIT_MESSAGE" value="тесты в процессе" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -398,7 +350,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java</url>
-          <line>38</line>
+          <line>40</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -423,7 +375,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/order/processing/system/OrderApplicationServiceTest.java</url>
-          <line>207</line>
+          <line>210</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>

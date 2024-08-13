@@ -44,3 +44,4 @@ include("order-service:order-domain:order-application-service")
 findProject(":order-service:order-domain:order-application-service")?.name = "order-application-service"
 include("order-service:order-domain:order-application-service")
 findProject(":order-service:order-domain:order-application-service")?.name = "order-application-service"
+include("infrastructure")
