@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="тесты в процессе">
-      <change afterPath="$PROJECT_DIR$/infrastructure/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/common.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/docker-compose.yaml" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="добавил конфиги для кафки KafkaProducerConfigData KafkaConsumerConfigData KafkaConfigData">
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/order/processing/system/KafkaConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/order/processing/system/KafkaConsumerConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/order/processing/system/KafkaProducerConfigData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-container/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
@@ -38,6 +45,12 @@
         <task path="$PROJECT_DIR$/order-service/order-domain/order-application-service">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/infrastructure">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/infrastructure/kafka">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -53,6 +66,32 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="food-ordering-system" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="food-ordering-system" type="f1a62948:ProjectNode" />
+                <item name="infrastructure" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="food-ordering-system" type="f1a62948:ProjectNode" />
+                <item name="infrastructure" type="2d1252cf:ModuleNode" />
+                <item name="kafka" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="food-ordering-system" type="f1a62948:ProjectNode" />
+                <item name="infrastructure" type="2d1252cf:ModuleNode" />
+                <item name="kafka" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="food-ordering-system" type="f1a62948:ProjectNode" />
+                <item name="infrastructure" type="2d1252cf:ModuleNode" />
+                <item name="kafka" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -126,12 +165,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Users/Anton Rudnikovskiy/IdeaProjects/food-ordering-system",
+    "last_opened_file_path": "C:/Users/Anton Rudnikovskiy/IdeaProjects/food-ordering-system/order-service/order-container/src/main/resources",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "d5f2836f2363ce4064b47855bca53939"
+    "settings.editor.selected.configurable": "spring.boot",
+    "spring.configuration.checksum": "737916421f75e683266232e6e208526e"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -139,30 +179,59 @@
       <recent name="C:\Users\Anton Rudnikovskiy\IdeaProjects\food-ordering-system" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Anton Rudnikovskiy\IdeaProjects\food-ordering-system\infrastructure\kafka" />
       <recent name="C:\Users\Anton Rudnikovskiy\IdeaProjects\food-ordering-system\order-service\order-domain\order-application-service\src\main\java\order\processing\system" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.infrastructure/docker-compose.yaml.schema-registry: Compose Deployment">
-    <configuration name="infrastructure/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="infrastructure/docker-compose.yaml" />
-        </settings>
-      </deployment>
+  <component name="RunManager" selected="Gradle.food-ordering-system:infrastructure:kafka [build]">
+    <configuration name="food-ordering-system:infrastructure:kafka [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/infrastructure/kafka" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="infrastructure/docker-compose.yaml.kafka-broker-1: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="kafka-broker-1" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="infrastructure/docker-compose.yaml" />
-        </settings>
-      </deployment>
+    <configuration name="food-ordering-system:infrastructure:kafka [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/infrastructure/kafka" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="KafkaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="food-ordering-system.infrastructure.kafka.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="order.processing.system.KafkaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="infrastructure/docker-compose.yaml.kafka-broker-3: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
@@ -205,11 +274,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.food-ordering-system:infrastructure:kafka [build]" />
+        <item itemvalue="Gradle.food-ordering-system:infrastructure:kafka [clean]" />
         <item itemvalue="Docker.infrastructure/docker-compose.yaml.schema-registry: Compose Deployment" />
         <item itemvalue="Docker.infrastructure/docker-compose.yaml.kafka-manager: Compose Deployment" />
         <item itemvalue="Docker.infrastructure/docker-compose.yaml.kafka-broker-3: Compose Deployment" />
-        <item itemvalue="Docker.infrastructure/docker-compose.yaml.kafka-broker-1: Compose Deployment" />
-        <item itemvalue="Docker.infrastructure/docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +291,10 @@
       <option name="presentableId" value="Default" />
       <updated>1723205152389</updated>
       <workItem from="1723205154416" duration="65565000" />
-      <workItem from="1723472531193" duration="24133000" />
+      <workItem from="1723472531193" duration="29804000" />
+      <workItem from="1723626913704" duration="2312000" />
+      <workItem from="1723629551666" duration="997000" />
+      <workItem from="1723630587747" duration="3672000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -308,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723547843585</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="модуль infrastructure с docker-compose.yaml">
+      <created>1723569878710</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723569878715</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +417,8 @@
     <MESSAGE value="Добавил EventListener и publisher" />
     <MESSAGE value="VNS" />
     <MESSAGE value="тесты в процессе" />
-    <option name="LAST_COMMIT_MESSAGE" value="тесты в процессе" />
+    <MESSAGE value="модуль infrastructure с docker-compose.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="модуль infrastructure с docker-compose.yaml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -380,5 +460,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

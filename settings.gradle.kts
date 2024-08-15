@@ -45,3 +45,15 @@ findProject(":order-service:order-domain:order-application-service")?.name = "or
 include("order-service:order-domain:order-application-service")
 findProject(":order-service:order-domain:order-application-service")?.name = "order-application-service"
 include("infrastructure")
+include("infrastructure:kafka")
+findProject(":infrastructure:kafka")?.name = "kafka"
+include("infrastructure:kafka:kafka-config-data")
+findProject(":infrastructure:kafka:kafka-config-data")?.name = "kafka-config-data"
+include("infrastructure:kafka:kafka-consumer")
+findProject(":infrastructure:kafka:kafka-consumer")?.name = "kafka-consumer"
+include("infrastructure:kafka:kafka-model")
+findProject(":infrastructure:kafka:kafka-model")?.name = "kafka-model"
+include("infrastructure:kafka:kafka-producer")
+findProject(":infrastructure:kafka:kafka-producer")?.name = "kafka-producer"
+include("infrastructure:kafka:kafka-model")
+findProject(":infrastructure:kafka:kafka-model")?.name = "kafka-model"
