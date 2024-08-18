@@ -2,6 +2,7 @@ package order.processing.system.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import order.processing.system.KafkaConsumerConfigData;
 import order.processing.system.Topic;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -14,11 +15,12 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 public class KafkaProducerImpl implements KafkaProducer<Topic> {
     private final Producer<String, Object> producer;
+    private final KafkaConsumerConfigData kafkaConsumerConfigData;
 
     @Override
     public void send(Topic topic) {
         ProducerRecord<String, Object> record = new ProducerRecord<>(
-                topic.getTopicName(),
+                kafkaConsumerConfigData.getTopicName(),
                 topic.getTopic()
         );
 

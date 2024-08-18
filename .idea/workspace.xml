@@ -4,32 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="файлы avsc">
-      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/Topic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/KafkaDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/exception/KafkaProducerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/service/KafkaProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/service/KafkaProducerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/service/Topic.java" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="KafkaProducer">
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/src/main/java/order/processing/system/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/src/main/java/order/processing/system/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/KafkaSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/order/processing/system/KafkaConfigData.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/order/processing/system/KafkaConfigData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/OrderApprovalStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/PaymentOrderStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/PaymentRequestAvroModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/PaymentResponseAvroModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/PaymentStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/RestaurantApprovalRequestAvroModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/RestaurantApprovalResponseAvroModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/java/order/processing/system/RestaurantOrderStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/resources/avro/payment_request.avsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/resources/avro/payment_response.avsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/resources/avro/restaurant_approval_request.avsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/src/main/resources/avro/restaurant_approval_response.avsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/order/processing/system/KafkaConsumerConfigData.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/order/processing/system/KafkaConsumerConfigData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/KafkaDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/service/KafkaProducerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/src/main/java/order/processing/system/service/KafkaProducerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,7 +355,7 @@
       <workItem from="1723626913704" duration="2312000" />
       <workItem from="1723629551666" duration="997000" />
       <workItem from="1723630587747" duration="6311000" />
-      <workItem from="1723911766171" duration="26180000" />
+      <workItem from="1723911766171" duration="29433000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -478,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723928770087</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="KafkaProducer">
+      <created>1723997573858</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723997573858</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +502,8 @@
     <MESSAGE value="модуль infrastructure с docker-compose.yaml" />
     <MESSAGE value="добавил конфиги для кафки KafkaProducerConfigData KafkaConsumerConfigData KafkaConfigData" />
     <MESSAGE value="файлы avsc" />
-    <option name="LAST_COMMIT_MESSAGE" value="файлы avsc" />
+    <MESSAGE value="KafkaProducer" />
+    <option name="LAST_COMMIT_MESSAGE" value="KafkaProducer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

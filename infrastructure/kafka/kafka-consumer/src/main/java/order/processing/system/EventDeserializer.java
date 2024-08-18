@@ -1,6 +1,5 @@
 package order.processing.system;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 @Component
 @Slf4j
 @RequiredArgsConstructor
-public class KafkaDeserializer implements Deserializer<Object> {
+public class EventDeserializer implements Deserializer<Object> {
     private final ObjectMapper objectMapper;
 
     @Override
