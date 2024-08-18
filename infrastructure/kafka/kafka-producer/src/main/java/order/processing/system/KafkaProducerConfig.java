@@ -3,7 +3,6 @@ package order.processing.system;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,7 +13,7 @@ import java.util.Properties;
 public class KafkaProducerConfig {
     private final KafkaConfigData kafkaConfigData;
     private final KafkaProducerConfigData kafkaProducerConfigData;
-    private final KafkaSerializer serializer;
+    private final EventSerializer serializer;
 
     @Bean
     public KafkaProducer<String, Object> producerFactory() {

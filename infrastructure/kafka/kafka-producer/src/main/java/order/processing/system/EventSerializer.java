@@ -12,7 +12,7 @@ import java.io.IOException;
 @Component
 @Slf4j
 @RequiredArgsConstructor
-public class KafkaSerializer implements Serializer<Object> {
+public class EventSerializer implements Serializer<Object> {
     private final ObjectMapper objectMapper;
 
     @Override
