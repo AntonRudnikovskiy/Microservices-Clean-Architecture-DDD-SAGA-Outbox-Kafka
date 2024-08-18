@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "kafka-config")
 public class KafkaConfigData {
     private String bootstrapServers;
+    private String groupId;
     private String schemaRegistryUrlKey;
     private String schemaRegistryUrl;
     private Integer numOfPartitions;

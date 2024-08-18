@@ -52,7 +52,6 @@ allprojects {
             dependency("org.springframework.boot:spring-boot-gradle-plugin:3.1.0")
 
             dependency("com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.13.0")
-            dependency("com.magusdevops.avro4k:gradle-plugin:0.30.0.RC4")
 
 
             dependency("org.junit.jupiter:junit-jupiter-params:5.9.2")
