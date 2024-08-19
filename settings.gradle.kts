@@ -57,3 +57,5 @@ include("infrastructure:kafka:kafka-producer")
 findProject(":infrastructure:kafka:kafka-producer")?.name = "kafka-producer"
 include("infrastructure:kafka:kafka-model")
 findProject(":infrastructure:kafka:kafka-model")?.name = "kafka-model"
+include("common:common-application")
+findProject(":common:common-application")?.name = "common-application"
