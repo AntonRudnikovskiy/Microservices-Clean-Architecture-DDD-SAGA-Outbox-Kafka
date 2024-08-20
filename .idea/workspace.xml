@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил OrderGlobalExceptionHandler">
-      <change afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderItemId.java" afterDir="false" />
+    <list default="true" id="71891068-6d0a-428c-b588-2c237761234f" name="Changes" comment="Добавил классы Order, OrderAddress, OrderItem, OrderItemId">
+      <change afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/adapter/OrderRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/mapper/OrderDataAccessMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/repository/OrderJpaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/order-dataaccess/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-dataaccess/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderAddressEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderItemEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-dataaccess/src/main/java/order/processing/system/order/entity/OrderItemId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/order/processing/system/OrderApplicationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/order/processing/system/OrderApplicationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Restaurant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +365,7 @@
       <workItem from="1723626913704" duration="2312000" />
       <workItem from="1723629551666" duration="997000" />
       <workItem from="1723630587747" duration="6311000" />
-      <workItem from="1723911766171" duration="47010000" />
+      <workItem from="1723911766171" duration="55752000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1723205239671</created>
@@ -492,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724068411851</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Добавил классы Order, OrderAddress, OrderItem, OrderItemId">
+      <created>1724099971245</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724099971245</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,25 +545,16 @@
     <MESSAGE value="KafkaConsumer" />
     <MESSAGE value="Поменял назваание на EventSerializer" />
     <MESSAGE value="Добавил OrderGlobalExceptionHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил OrderGlobalExceptionHandler" />
+    <MESSAGE value="Добавил классы Order, OrderAddress, OrderItem, OrderItemId" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил классы Order, OrderAddress, OrderItem, OrderItemId" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/order/processing/system/OrderCreateCommandHandler.java</url>
           <line>40</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/entity/Order.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java/order/processing/system/OrderDomainServiceImpl.java</url>
@@ -567,7 +573,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/order/processing/system/OrderApplicationServiceTest.java</url>
-          <line>210</line>
+          <line>209</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>

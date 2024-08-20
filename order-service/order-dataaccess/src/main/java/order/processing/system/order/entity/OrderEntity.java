@@ -3,20 +3,23 @@ package order.processing.system.order.entity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.IdClass;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import order.processing.system.valueobject.OrderStatus;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -26,40 +29,44 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@IdClass(OrderItemId.class)
-@Table(name = "order_items")
-public class OrderItem {
+@Table(name = "orders")
+public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
-    @Id
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
-    private Order order;
+    @Column(name = "customer_id")
+    private UUID customerId;
 
-    @Column(name = "product_id")
-    private UUID productId;
+    @Column(name = "restaurant_id")
+    private UUID restaurantId;
+
+    @Column(name = "tracking_id")
+    private UUID trackingId;
 
     @Column(name = "price")
     private BigDecimal price;
 
-    @Column(name = "quantity")
-    private UUID quantity;
+    @Column(name = "order_status")
+    @Enumerated(value = EnumType.STRING)
+    private OrderStatus orderStatus;
 
-    @Column(name = "subtotal")
-    private UUID subtotal;
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private OrderAddressEntity address;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private List<OrderItemEntity> items;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        OrderItem orderItem = (OrderItem) o;
-        return id.equals(orderItem.id) && order.equals(orderItem.order);
+        OrderEntity order = (OrderEntity) o;
+        return id.equals(order.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, order);
+        return Objects.hash(id);
     }
 }

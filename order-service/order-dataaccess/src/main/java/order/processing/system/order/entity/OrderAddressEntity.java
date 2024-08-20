@@ -25,14 +25,14 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 @Table(name = "order_address")
-public class OrderAddress {
+public class OrderAddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id")
-    private Order order;
+    private OrderEntity order;
 
     @Column(name = "street")
     private String street;
@@ -47,7 +47,7 @@ public class OrderAddress {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        OrderAddress that = (OrderAddress) o;
+        OrderAddressEntity that = (OrderAddressEntity) o;
         return Objects.equals(id, that.id);
     }
 

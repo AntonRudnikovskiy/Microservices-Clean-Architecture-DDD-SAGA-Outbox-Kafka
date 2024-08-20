@@ -135,8 +135,7 @@ public class OrderApplicationServiceTest {
                 .build();
 
 
-        restaurant = Restaurant.builder()
-                .build();
+        restaurant = Restaurant.Builder.builder().build();
 
         Customer customer = new Customer();
         customer.setId(new CustomerId(CUSTOMER_ID));
@@ -171,7 +170,7 @@ public class OrderApplicationServiceTest {
     public void testCreateOrderWithRestaurantNotExist() {
         Customer customer = new Customer();
         customer.setId(new CustomerId(CUSTOMER_ID));
-        Restaurant restaurant = Restaurant.builder().build();
+        Restaurant restaurant = Restaurant.Builder.builder().build();
 
         orderNull = CreateOrderCommand.builder()
                 .customerId(CUSTOMER_ID)
@@ -194,7 +193,7 @@ public class OrderApplicationServiceTest {
         order.setId(new OrderId(ORDER_ID));
 
         restaurant.setId(new RestaurantId(RESTAURANT_ID));
-        restaurant = Restaurant.builder()
+        restaurant = Restaurant.Builder.builder()
                 .products(List.of(new Product(new ProductId(PRODUCT_ID), "product-1",
                                 new Money(new BigDecimal("50.00"))),
                         new Product(new ProductId(PRODUCT_ID), "product-2",

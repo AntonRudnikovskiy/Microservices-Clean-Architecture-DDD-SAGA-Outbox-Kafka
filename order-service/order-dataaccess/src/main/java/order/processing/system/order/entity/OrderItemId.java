@@ -16,7 +16,7 @@ import java.util.Objects;
 @Builder
 public class OrderItemId implements Serializable {
     private Long id;
-    private Order order;
+    private OrderEntity order;
 
     @Override
     public boolean equals(Object o) {
